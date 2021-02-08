@@ -21,13 +21,20 @@
 
             <!--Main Section-->
             <main class="main">
-                <h1>Sports Calculator?</h1>
+                <h1>Fitness Calculator</h1>
                 <p>Welcome to my site. Please, fill out all information to recieve your free fitness evaluation.</p>
-                <div>  
+                <div class="info">  
                     <input id= age type="text" placeholder="Age">
                     <input id= height type="text" placeholder="Height in inches">
                     <input id= weight type="text" placeholder="Weight in lbs">
-                    <input id= sex type="text" placeholder="Sex">
+                    <input id= hr type="text" placeholder="RHR: 60 secs">
+                </div>
+                <div class="info_2">
+                    <label id= sex>Sex</label>
+                    <select>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>  
+                        </select>    
                     <label id= activity>Level of Activity</label>
                     <select>
                         <option value="sedentary">Sedentary</option>
@@ -35,10 +42,9 @@
                         <option value="moderate">Moderate</option>
                         <option value="high">High</option>
                     </select>
-                    <input id= hr type="text" placeholder="RHR">
-                    <div id="error"></div>
-                    <input class="submit" type="submit" value="Results Here!">
-                </div>  
+                </div>    
+                   <input class="submit" type="submit" value="Results Here!">
+                
             </main>  
            
         </div>

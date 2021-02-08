@@ -1,32 +1,48 @@
 /*Form*/
 
 function validate() { 
-  //fields
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let number = document.getElementById("number").value;
- 
-  //error message
-  let error = document.getElementById("error"); 
-  
-  //create an error message array so it throws out all errors possible (future)
-  let message = ["All fields must be filled out", "Full name must be used", "Valid email must be used", "Phone number must include area code"];
+  //variables for fields
+  let name = document.getElementById("fname").value;
+  let email = document.getElementById("eName").value;
+  let number = document.getElementById("phoneNumber").value;
+  let password = document.getElementById("pName").value;
 
-  if(name.length == 0 || email.length == 0 || number.length == 0) {
-    error.innerHTML = message [0];
+  // variables for regex
+  let emailRegex = /^\w-|.\w+|\w+@/g;
+  let phoneRegex = /[^\s-]?\(?(\d{3})\)?[\s-]?\d{3}[\s-]?\d{4}/g;
+  let passwordRegex = 
+
+  // more variables to try
+  let emailResult = emailRegex.test(email);
+  let phoneResult = phoneRegex.test(phone);
+
+  // variable for error message
+  let error = document.getElementById("error"); 
+  let error_2 = document.getElementById("error_2"); 
+  let error_3 = document.getElementById("error_3"); 
+  let error_4 = document.getElementById("error_4"); 
+
+  //variable for array of messages
+  let message = ["All fields must be filled out",
+    "Full name must be used",
+    "Valid email must be used", 
+    "Phone number must include area code", 
+    "Password must contain at least 8 characters, 1 uppercase, 1 lowercase, and 1 special character"];
+  
+ 
+  if(email = emailResult) {
+    error_2.innerHTML = message [2];
     return false;
-  } else if(name.length >=1 && name.length <= 6) {
-    error.innerHTML = message [1];
-    return false;
-  } else if(email.indexOf("@") == -1) {
-    error.innerHTML = message [2];
-    return false;
-  } else if(number.length >=1 && number.length < 10) {
-    error.innerHTML = message [3];
+  } else if(number = phoneResult) {
+    error_3.innerHTML = message [3];
     return false;
   }
+    //for (i = 0; i < message.length; i++) {}
+  
+ 
+  
 
-  alert ("Thank you for your support" + " " + name); //adds name that was filled in to message
+  alert ("Thank you for all your information" + " " + name); //adds name that was filled in to message
   return true;
 
 }

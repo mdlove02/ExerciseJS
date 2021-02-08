@@ -28,6 +28,8 @@ header, footer, a {
 }
 
 a:hover {
+	background-color: #b6a68d;
+	color: white
 	
 }
 
@@ -51,7 +53,7 @@ ul {
 	border: 4px solid black;
 }
 
-#name, #email, #number, #password {
+#fname, #lname, #eName, #phoneNumber, #pName {
 	display: flex;
 	justify-content: center;
 	padding: 3px;
@@ -80,6 +82,11 @@ h4 {
 	border-bottom: 2px solid black;
 }
 
+#sex:hover, #activity:hover {
+	background-color: #928666;
+	color: white
+}
+
 
 /* ================================= 
  media queries
@@ -91,6 +98,38 @@ h4 {
 }
 
 @media only screen and (min-width: 1025px) {
+	.main {
+		
+	}
+
+	.info {
+		display: flex;
+		justify-content: center;
+		
+	}
+
+	#age, #height, #weight, #hr, #sex, #activity {
+		display: flex;
+	
+	}
+
+	#age, #height, #weight, #hr {
+		margin: 20px 50px 0px 50px
+	}
+
+	select, #sex, #activity {
+		margin-left: 285px;
+	}
+
+	h1, p {
+		display: flex;
+		justify-content: center;
+		
+	}
+
+	.submit {
+		
+	}
 	
 
 	
