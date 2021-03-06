@@ -12,28 +12,38 @@
         <!--Navigation Bar-->
         <div class="sticky"> <!--Keep footer at bottom-->
             <header class="menu">
+                <input class="button" type="checkbox" id="toggle"/> <!--allows clicking-->
+                <label class="work" for="toggle"><span class="bars"></span></label> <!--turns into menu-->
                 <ul class="navbar">
                     <li><a href="index.html" target="_self">Home</a></li>
-                    <li><a href="#footer" target="_self">More Info</a></li>
+                    
                 </ul>
             </header>
 
             <!--Main Section-->
             <main class="main">
                 <div class="container">
-                    <form action="my" method="POST" id="form" onclick="return validate();" ><!--form function-->
+                    <form id="form" onclick="return validate();" ><!--form function-->
                         <h4>Get your results here!</h4>
                         <input id= name type="text" placeholder="Full Name">  <!--must add name for sending data-->
                         <input id= email type="text" placeholder="Email">
                         <input id= phoneNumber type="text" placeholder="Phone Number">
                         <input id= password type="text" placeholder="Password">
                         <div id="error"></div>
-                        <input id= submit class="submit" type="submit" value="add">
+                        <button class="submit" type="submit" value="submit" onclick="savePersonalData();">submit</button>
                     </form>
+                    <script>
+                        function savePersonalData() {
+                            let nameText = document.getElementById("name").value;
+                        
+                            let blob = new Blob(["nameText"], {type: "text/plain;charset=utf-8"});
+                            saveAs(blob, "data.txt");
+                        }
+                    </script> 
                 </div>
             </main>  
             
-        </div>
+        </div>https://mdlove02.github.io/ExerciseJS/
 
         <footer class="main-footer">
             

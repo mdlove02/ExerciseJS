@@ -13,21 +13,24 @@
         
         <div class="sticky"> <!--Keep footer at bottom-->
             <header class="menu">
+                <input class="button" type="checkbox" id="toggle"/> <!--allows clicking-->
+                <label class="work" for="toggle"><span class="bars"></span></label> <!--turns into menu-->
                 <ul class="navbar">
-                    <li><a href="signup.html" target="_self">Form</a></li>
-                    <li><a href="#footer" target="_self">More Info</a></li>
+                    <li><a href="signup.html" target="_self">Fitness Form</a></li>
+                    <li><a href="signup.html" target="_self">More Info</a></li>
                 </ul>
             </header>
-
+           
+            
             <!--Main Section-->
             <main class="main">
                 <h1>Fitness Calculator</h1>
                 <p>Welcome to my site. Please, fill out all information to recieve your free fitness evaluation.</p>
                 <div class="info">  
-                    <input id= age type="text" placeholder="Age">
-                    <input id= height type="text" placeholder="Height in inches">
-                    <input id= weight type="text" placeholder="Weight in lbs">
-                    <input id= hr type="text" placeholder="RHR: 60 secs">
+                    <input id= age type="number" placeholder="Age">
+                    <input id= height type="number" placeholder="Height in inches">
+                    <input id= weight type="number" placeholder="Weight in lbs">
+                    <input id= hr type="number" placeholder="RHR: 60 secs">
                 </div>
                 <div class="info_2">
                     <label id= sex>Sex</label>
@@ -52,5 +55,6 @@
         <footer class="main-footer">
             
         </footer>
+        <script src="./scripts/equations.js"></script>
     </body>
 </html>
