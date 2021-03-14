@@ -6,6 +6,7 @@
         <title>Exercise App</title> 
         <link rel="stylesheet" href="./styles/normalize.css">
         <link rel="stylesheet" type="text/css" href="./styles/index.css">
+       
     </head>
 
     <body>
@@ -23,31 +24,29 @@
             <!--Main Section-->
             <main class="main">
                 <div class="container">
-                    <form id="form" onclick="return validate();" ><!--form function-->
+                    <form id="form" onkeyup="reformat();"><!--form function-->
                         <h4>Get your results here!</h4>
-                        <input id= name type="text" placeholder="Full Name">  <!--must add name for sending data-->
-                        <input id= email type="text" placeholder="Email">
-                        <input id= phoneNumber type="text" placeholder="Phone Number">
-                        <input id= password type="text" placeholder="Password">
+                        <input id= name name= "fullName" type="text" placeholder="Full Name">  <!--must add name for sending data-->
+                        <input id= email name= "email" type="text" placeholder="Email">
+                        <input id= phoneNumber name= "number" type="text" placeholder="Phone Number">
+                        <input id= password name= "password" type="text" placeholder="Password">
                         <div id="error"></div>
-                        <button class="submit" type="submit" value="submit" onclick="savePersonalData();">submit</button>
+                        <button class="submit" value="submit" onclick="return validate();" onsubmit="savePersonalData();">submit</button>
                     </form>
-                    <script>
-                        function savePersonalData() {
-                            let nameText = document.getElementById("name").value;
-                        
-                            let blob = new Blob(["nameText"], {type: "text/plain;charset=utf-8"});
-                            saveAs(blob, "data.txt");
-                        }
-                    </script> 
+                    
                 </div>
             </main>  
             
-        </div>https://mdlove02.github.io/ExerciseJS/
+        </div> <!--https://mdlove02.github.io/ExerciseJS/-->
 
         <footer class="main-footer">
             
         </footer>
         <script src="./scripts/index.js"></script>
-    </body>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+                crossorigin="anonymous">
+        </script>
+        
+     </body>
 </html>
