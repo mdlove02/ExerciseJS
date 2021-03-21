@@ -1,4 +1,4 @@
-/*Sending form*/
+/*Sending form to API*/
 function savePersonalData(){
   $.ajax({
     url: "https://api.apispreadsheets.com/data/9259/",
@@ -46,10 +46,11 @@ document.getElementById("form").addEventListener("submit", function (validate) {
 
     return savePersonalData().then(val => {
       alert(val.message);
+      onsubmit = setTimeout(function(){window.location.reload();},1000)
     }).catch(error => {
       alert(error.message);
     })
-
+    
 });
   
 /*reformating phone number*/
@@ -58,6 +59,10 @@ document.getElementById("phoneNumber").addEventListener("keyup", function () {
   let newNumber = this.value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
   this.value = newNumber;
 });
+
+
+
+
 
 
 
