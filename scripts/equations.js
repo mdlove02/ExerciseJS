@@ -1,17 +1,17 @@
 /*Calculation*/
 
-let inputAge = document.getElementById("age");
-let inputHt = document.getElementById("height");
-let inputWt = document.getElementById("weight");
-let inputResult = document.getElementById("results");
+
     
   
 //BMI
 function bmi() {
+  let inputAge = document.getElementById("age");
+  let inputHt = document.getElementById("height");
+  let inputWt = document.getElementById("weight");
   let inputResult = document.getElementById("results");
   inputResult.addEventListener("click", function() {
     let bmi = inputWT.value / [(inputWt.value**2)]*703;
-    inputResult.value = bmi;
+    inputResult.value.innerHTML = bmi;
     if(bmi < 18.5){
       return "Underweight";
     }else if (bmi < 25){
@@ -37,4 +37,4 @@ function bmi() {
     }
   
    
- 
+  } 

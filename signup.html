@@ -28,14 +28,14 @@
             <!--Main Section-->
             <main class="main">
                 <div class="container">
-                    <form id="form" onkeyup="reformat();"></form><!--form function-->
+                    <form id="form"><!--form function-->
                         <h4>Get your results here!</h4>
-                        <input id= name name= "fullName" type="text" placeholder="Full Name">  <!--must add name for sending data-->
-                        <input id= email name= "email" type="text" placeholder="Email">
-                        <input id= phoneNumber name= "number" type="text" placeholder="Phone Number">
-                        <input id= password name= "password" type="text" placeholder="Password">
+                        <input id= "name" name= "fullName" type="text" placeholder="Full Name">  <!--must add name for sending data-->
+                        <input id= "email" name= "email" type="text" placeholder="Email">
+                        <input id= "phoneNumber" name= "number" type="text" placeholder="Phone Number">
+                        <input id= "password" name= "password" type="text" placeholder="Password">
                         <div id="error"></div>
-                        <button class="submit" value="submit">submit</button>
+                        <button class="submit" value="submit" onsubmit="validate();">submit</button>
                     </form>
                     
                 </div>
