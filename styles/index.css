@@ -98,7 +98,7 @@ h4 {
 		
 	}
 
-	#age, #height, #weight, #results, #sex, #activity {
+	#age, #height, #weight, #results, #sex, #outputBmi {
 		display: flex;
 		margin: 20px 50px 0px 0px
 		
@@ -170,7 +170,7 @@ h4 {
 		
 	}
 
-	#age, #height, #weight, #results, #sex, #activity {
+	#age, #height, #weight, #results, #sex, #outputBmi {
 		display: flex;
 	
 	}
@@ -179,7 +179,7 @@ h4 {
 		margin: 20px 50px 0px 50px
 	}
 
-	select, #sex, #activity {
+	select, #sex, #outputBmi {
 		margin-left: 285px;
 	}
 
@@ -189,9 +189,7 @@ h4 {
 		
 	}
 
-	.submit {
-		
-	}
+	
 	
 
 	
