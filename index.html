@@ -24,19 +24,26 @@
             
             <!--Main Section-->
             <main class="main">
-                <h1>BMI Calculator</h1>
-                <p>Welcome to my site. Please, fill out all information to recieve your free BMI evaluation.</p>
-                <form id= "bmiForm" onclick="calculate();">
+                <h1>Easy Fitness Calculator</h1>
+                <p>Welcome to my site. Please, fill out all information to recieve your free evaluation.</p>
+                <form id= "bmiForm">
                     <div class="info">  
                         <input id= "height" type="number" placeholder="Height in inches">
                         <input id= "weight" type="number" placeholder="Weight in lbs">
+                        <input id= "age" type="number" placeholder="Age in years">
                     </div>
+                    <select id="sex">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
                     <div class="info_2">
                         <label id="outputBmi">Your BMI is:</label>
                         <div id="results"></div>
+                        <label id="outputRmr">Your RMR is:</label>
+                        <div id="resultsRmr"></div>
                     </div>
                    
-                   <button id="done" class="submit" type="submit">Results Here!</button>
+                   <button id="done" class="submit" type="submit" onclick="calcRmr();">Results Here!</button>
                    
                 </form> 
                 
